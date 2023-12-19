@@ -31,26 +31,27 @@ public class Main {
                     break;
                 case 3:
                     System.out.println ("Lương trung bình nhân viên parttime "+ avgStaffPartTime(arr));
+                    break;
                 case 4:
                     System.out.println ("Tổng lương phải trả cho nhân viên parttime " + totalSalaryPartTime (arr));
+                    break;
                 case 5:
                     System.out.println ("Số người có lương lớn hơn trung bình là " + countStaffSalaryBiggerAvg (arr));
+                    break;
                 case 6:
                     System.out.println ("nhập tên muốn tìm");
                     nameInput = sc.nextLine ();
                     System.out.println ("số nhân viên có tên "+ nameInput + " là " + countStaffByName (arr,nameInput));
+                    break;
             }
         }while (choice == 0);
-        n1.getSalary ();
     }
     public static double avgStaff(Staff[] arr){
         int sum = ZERO;
-        int count = ZERO;
         for (Staff i : arr) {
             sum += i.getSalary ();
-            count++;
         }
-        return sum/count;
+        return sum/arr.length;
     }
     public static int avgStaffFullTime(Staff[] arr){
         int sum = ZERO;
